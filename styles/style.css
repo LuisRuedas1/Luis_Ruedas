@@ -1,0 +1,177 @@
+/*Set standart body options and set backgrounds*/
+body {
+    font-family: 'Ysabeau', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.indexBody {
+    background-image: url('../images/indexBackground.jpg');
+}
+
+.whoweareBody{
+    background-image: url('../images/fondo4.png');
+}
+
+.cvBody{
+    background-image: url('../images/fondo4.png');
+}
+
+.projectBody {
+    background-image: url('../images/fondo4.png');
+}
+
+.newsBody {
+    background-image: url('../images/fondo4.png');
+}
+
+.applyBody {
+    background-image: url('../images/fondo4.png');
+}
+
+.contactBody {
+    background-image: url('../images/fondo4.png');
+}
+
+/*General Navbar appearance*/
+
+.mainNavbar{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.navbarLinks{
+  justify-content: right;
+  padding: 2px;
+}
+
+#navbarNav{
+    font-size: 22px;
+}
+
+/*Info button appearance and behaviour*/
+
+.infoButton{
+    background-color: rgb(255, 240, 218);
+    border-radius: 10%;
+    opacity: 0.7; 
+}
+
+.infoButton:hover{
+    opacity: 1;   
+    background-color:rgb(255, 240, 218) ;
+}
+
+.infoButton:active{
+    opacity: 1;   
+    background-color:rgb(255, 240, 218) ;
+}
+
+.infoButton.clicked{
+    opacity: 1;   
+    background-color:rgb(255, 240, 218) ;
+}
+
+/*Index styling*/
+
+.pageTitleText{
+    font-size: x-large
+}
+
+.mainCenterText {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:100px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    color: white;
+}
+
+/*Who we are styling*/
+
+.divsWithCols{   /*Also used in Contact for stardarized text color and size*/
+    color: white;
+    height: 200px;
+    font-size: large;
+    
+}
+
+.colsText{      /*Also used in Contact for stardarized text color and size*/
+    /* background-color: rgb(128,128,128,0.4); */
+    border-radius: 10px;
+    margin: 10px;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CV styling*/
+
+.cvAccordion{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.pubListItem {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.pubItemDetails h2 {
+    margin-bottom: 5px;
+}
+
+.pubItemDetails p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.imgArticles{
+    border: 2px groove black;
+}
+
+/*Contact  styling*/
+
+.gridDiv{
+    margin-top: 100px;
+}
+
+.contactDiv{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(128, 128, 128, 0.4);
+    height: 500px;
+    width: 800px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.imgPerson{
+    border: 10px inset rgb(40, 90, 40); 
+  
+}
+
+.divInfo{
+   margin-top: 50px;
+   margin: 5px;
+}
+
+
+/*Adjust styling for mobile devices*/
+
+@media (max-width: 767px) {
+    .cvAccordion {
+      width: 100%;
+      margin: 0;
+    }
+}
