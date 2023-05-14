@@ -22,3 +22,13 @@ const popover = new bootstrap.Popover('.popover-dismiss', {
 
 
 
+var element = document.getElementById("infoButton");
+element.setAttribute("data-bs-content", "custom value");
+
+window.addEventListener("resize", setZoom);
+window.addEventListener("DOMContentLoaded", setZoom);
+
+
+
+
+

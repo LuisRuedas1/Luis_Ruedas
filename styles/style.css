@@ -74,6 +74,10 @@ body {
     background-color:rgb(255, 240, 218) ;
 }
 
+.italicText{
+    font-style: italic;
+}
+
 /*Index styling*/
 
 .pageTitleText{
@@ -96,9 +100,12 @@ body {
 
 .divsWithCols{   /*Also used in Contact for stardarized text color and size*/
     color: white;
-    height: 200px;
-    font-size: large;
-    
+    text-align: justify;
+    margin: 10px 0px 0px 10px;      
+}
+
+.divsWithCols img{
+    max-width: 420px;
 }
 
 .colsText{      /*Also used in Contact for stardarized text color and size*/
@@ -109,6 +116,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.card{
+   background-color: rgb(128, 128, 128, 0.4);
+}
+
+.imgProfile{
+    
+}
+
+.contactBtn{
+    background-color: green;
+    border: green;
+}
+
+.contactBtn:hover{
+    background-color: rgb(0, 68, 0);
+    border: rgb(0, 68, 0); 
+}
+
+.contactBtn:active{
+    background-color: green;
+    border: green; 
 }
 
 /*CV styling*/
@@ -138,32 +168,68 @@ body {
     border: 2px groove black;
 }
 
-/*Contact  styling*/
-
-.gridDiv{
-    margin-top: 100px;
+.pdfDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.contactDiv{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(128, 128, 128, 0.4);
-    height: 500px;
-    width: 800px;
-    border-radius: 20px;
-    padding: 10px;
+.pdfDisplayText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-.imgPerson{
-    border: 10px inset rgb(40, 90, 40); 
-  
+/*News styling*/
+
+.newsContent{
+    width: 70%;
+    margin: 10px auto;
 }
 
-.divInfo{
-   margin-top: 50px;
-   margin: 5px;
+.newsCard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.newsCard img{
+    max-width: 250px;
+}
+
+/*Apply to PSU styling*/
+.applyContent{
+    width: 70%;
+    margin: 10px auto;
+    text-align: center;
+    color: white;
+}
+
+.title{
+    text-align: center;
+    color: black;
+}
+
+
+/*Contact styling*/
+
+.contactMain{
+    margin: 10px auto;
+    width: 50%;
+}
+
+.contactCard{
+    color: white;
+    text-align: center;
+}
+
+.contactCard h2{
+    margin-top: 10px;
+}
+
+.contactCard ul{
+    list-style:none;
 }
 
 
