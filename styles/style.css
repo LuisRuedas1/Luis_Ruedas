@@ -12,27 +12,27 @@ body {
 }
 
 .whoweareBody{
-    background-image: url('../images/fondo4.png');
+    background-image: url('../images/indexBackground.jpg');
 }
 
 .cvBody{
-    background-image: url('../images/fondo4.png');
+    background-image: url('../images/indexBackground.jpg');
 }
 
 .projectBody {
-    background-image: url('../images/fondo4.png');
+    background-image: url('../images/indexBackground.jpg');
 }
 
 .newsBody {
-    background-image: url('../images/fondo4.png');
+    background-image: url('../images/indexBackground.jpg');
 }
 
 .applyBody {
-    background-image: url('../images/fondo4.png');
+    background-image: url('../images/indexBackground.jpg');
 }
 
 .contactBody {
-    background-image: url('../images/fondo4.png');
+    background-image: url('../images/indexBackground.jpg');
 }
 
 /*General Navbar appearance*/
@@ -40,6 +40,7 @@ body {
 .mainNavbar{
     font-size: larger;
     font-weight: bold;
+    background-color: rgb(88, 137, 228);
 }
 
 .navbarLinks{
@@ -51,32 +52,92 @@ body {
     font-size: 22px;
 }
 
+.navBack{
+    background-color: rgb(88, 137, 228);
+}
+
 /*Info button appearance and behaviour*/
 
-.infoButton{
+
+.iIcon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Popup container */
+.popup {
     background-color: rgb(255, 240, 218);
     border-radius: 10%;
-    opacity: 0.7; 
+    display: inline-block;
+    cursor: pointer;
+    height:38px;
+    width:32px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -125px;
+  }
+  
+  /* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+
+.popup:hover{
+    background-color:rgb(255, 216, 158) ;
 }
 
-.infoButton:hover{
-    opacity: 1;   
-    background-color:rgb(255, 240, 218) ;
+.popup:active{
+    background-color:rgb(255, 216, 158) ;
 }
 
-.infoButton:active{
-    opacity: 1;   
-    background-color:rgb(255, 240, 218) ;
+.popup.clicked{
+    background-color:rgb(255, 216, 158) ;
 }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
 
-.infoButton.clicked{
-    opacity: 1;   
-    background-color:rgb(255, 240, 218) ;
-}
 
-.italicText{
-    font-style: italic;
-}
 
 /*Index styling*/
 
@@ -85,27 +146,36 @@ body {
 }
 
 .mainCenterText {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: center;
+    margin: auto;
+    margin-top: 15%;
     font-size:100px;
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
     color: white;
+    transition: margin-top 0.2s ease-in-out;
 }
+
+.mainCenterTextModified {
+    margin-top: 1%;
+  }
 
 /*Who we are styling*/
 
 .divsWithCols{   /*Also used in Contact for stardarized text color and size*/
     color: white;
     text-align: justify;
-    margin: 10px 0px 0px 10px;      
+    margin: 10px 0px 0px 10px;   
+    overflow: auto;   
 }
 
 .divsWithCols img{
-    max-width: 420px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
 }
 
 .colsText{      /*Also used in Contact for stardarized text color and size*/
@@ -122,9 +192,10 @@ body {
    background-color: rgb(128, 128, 128, 0.4);
 }
 
-.imgProfile{
-    
+main{
+    overflow:hidden;
 }
+
 
 .contactBtn{
     background-color: green;
@@ -192,10 +263,15 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     color: white;
+    overflow: hidden;
 }
 
 .newsCard img{
-    max-width: 250px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
 }
 
 /*Apply to PSU styling*/
@@ -241,3 +317,23 @@ body {
       margin: 0;
     }
 }
+
+@media (max-width: 506px) {
+    .mainCenterText {
+        position: center;
+        margin: auto;
+        font-size: 60px;
+        margin-top: 40%;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+        color: white;
+        transition: margin-top 0.2s ease-in-out;
+    }
+
+    .mainCenterTextModified {
+        margin-top: 1%;
+      }
+}
+
+

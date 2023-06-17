@@ -6,27 +6,32 @@ function addClassOnResize() {
     var myDiv = document.getElementById("mainNavbar");
 
     if (screenWidth < 992) {
-      myDiv.classList.add("bg-light");
+      myDiv.classList.add("navBack");
     } else {
-      myDiv.classList.remove("bg-light");
+      myDiv.classList.remove("navBack");
     }
 }
 
-//required for bootstrap popover to work
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-const popover = new bootstrap.Popover('.popover-dismiss', {
-    trigger: 'focus'
-  })
+$(document).ready(function() {
+  $('#menu-button').on('click', function() {
+    $('.mainCenterText').toggleClass('mainCenterTextModified');
+  });
+});
+
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+var popup = document.getElementById("myPopup");
+window.onclick = function(event) {
+  if (event.target == popup) {
+    popup.classList.remove("show");
+}
+} 
 
 
-
-
-var element = document.getElementById("infoButton");
-element.setAttribute("data-bs-content", "custom value");
-
-window.addEventListener("resize", setZoom);
-window.addEventListener("DOMContentLoaded", setZoom);
 
 
 
